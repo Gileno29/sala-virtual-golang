@@ -1,3 +1,4 @@
 Intalacao do tern:   go install  github.com/jackc/tern/v2@latest
 Iniciando o tern:    tern init ./internal/store/pgstore/migrations
 criar uma migration: tern new --migrations  ./internal/store/pgstore/migrations create__messages_table
+Executando o SQLC: sqlc generate -f ./internal/store/pgstore/sqlc.yml
