@@ -1,0 +1,15 @@
+version: "2"
+sql:
+  - engine: "postgresql" # qual banco vai utilizar
+    queries: "./queries" # diretorio das querys
+    schema:  "./migrations" #diretorio dos schemas
+    gen:
+      go: #tipo de codio a ser gerado
+        out: "pgstore" # diretorio onde será gerado
+        package: "pgstore"
+        sql_package: "pgx/v5"
+        overrides:
+          - db_type: "uuid"
+            go_type:
+              import: "github.com/google/uuid"
+              type: "UUID"
